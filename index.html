@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App | Arzaqul Mughny</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__inner">
+        <div class="header__title">
+          <img src="assets/images/icon/book-outline-white.svg" alt="Book icon" class="title__icon" />
+          <h1 class="title__text">Bookshelf App</h1>
+        </div>
+        <p class="header__desc">Managemen buku anda menjadi lebih mudah!</p>
+      </div>
+    </header>
+    <main>
+      <div class="container__flex">
+        <div class="container" id="new-book">
+          <div class="container__header">
+            <div class="book__icon icon"></div>
+            <div class="container__title">
+              <h2 class="container__title-text">Tambah buku baru</h2>
+              <p class="container__title-desc">Masukkan informasi mengenai buku</p>
+            </div>
+          </div>
+          <div class="container__main">
+            <form action="" id="addBookForm">
+              <div class="row__input">
+                <label for="judul">Judul buku</label>
+                <input type="text" name="judul" id="judul" placeholder="Masukkan judul buku (contoh : Pemrograman Web)" required />
+              </div>
+              <div class="row__input">
+                <label for="penulis">Penulis</label>
+                <input type="text" name="penulis" id="penulis" placeholder="Masukkan nama penulis buku tersebut" required />
+              </div>
+              <div class="row__input">
+                <label for="tahun">Tahun</label>
+                <input type="number" name="tahun" id="tahun" placeholder="Tahun buku ditulis (contoh : 2018)" required />
+              </div>
+              <div class="row__check">
+                <input type="checkbox" name="isReaded" id="isReaded" />
+                <label for="isReaded">Sudah dibaca</label>
+              </div>
+              <div class="row__button">
+                <input type="reset" class="clear__button" value="" />
+                <input type="submit" class="submit__button" value="Tambahkan" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="container" id="search__container">
+          <div class="container__header">
+            <div class="search__icon icon"></div>
+            <div class="container__title">
+              <h2 class="container__title-text">Cari buku</h2>
+              <p class="container__title-desc">Cari berdasarkan nama buku</p>
+            </div>
+          </div>
+          <div class="container__main">
+            <form action="" id="searchForm">
+              <input type="search" name="searchbox" id="searchBox" placeholder="Masukkan nama buku" />
+              <input type="submit" value="Cari" class="submit__button" />
+            </form>
+            <div class="container__main">
+              <ul class="book-list" id="bookFounded"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="uncompletedBook">
+        <div class="container__header">
+          <div class="bookUncompleted__icon icon"></div>
+          <div class="container__title">
+            <h2 class="container__title-text">Belum selesai dibaca</h2>
+            <p class="container__title-desc">Daftar buku yang belum selesai dibaca</p>
+          </div>
+        </div>
+        <div class="container__main">
+          <ul class="book-list" id="uncompletedBookList"></ul>
+        </div>
+      </div>
+      <div class="container" id="uncompletedBook">
+        <div class="container__header">
+          <div class="bookCompleted__icon icon"></div>
+          <div class="container__title">
+            <h2 class="container__title-text">Sudah selesai dibaca</h2>
+            <p class="container__title-desc">Daftar buku yang sudah selesai dibaca</p>
+          </div>
+        </div>
+        <div class="container__main">
+          <ul class="book-list" id="completedBookList"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
